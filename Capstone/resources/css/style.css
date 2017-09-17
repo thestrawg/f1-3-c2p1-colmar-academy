@@ -1,0 +1,337 @@
+/*======= Universal styles =======*/
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 160%;
+}
+.flex {
+  display: flex;
+}
+
+
+/* Container and columns */
+.container {
+  padding: 32px 0px 32px 24px;
+}
+.large-column {
+  width: 60%;
+}
+.small-column {
+  width: 40%;
+  padding-left: 24px;
+}
+@media only screen and (max-width: 650px) {
+  .container {
+    display: block;
+    width: 100%;
+    padding: 32px 0px 32px 0px;
+  }
+  .large-column {
+    width: 100%;
+  }
+  .small-column {
+    padding: 0;
+    width: auto;
+  }
+}
+
+/* List infobox (image and text, list style) */
+.list-infobox-image {
+  width: 35%;
+  padding: 16px;
+}
+.list-infobox-text {
+  width: 65%;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 16px;
+}
+@media only screen and (max-width: 650px) { /* Mobile */
+  .list-infobox {
+    padding: 16px 0px 32px 0px;
+  }
+  .list-infobox:first-child {
+    padding-top: 0px;
+  }
+  .list-infobox:last-child {
+    padding-bottom: 0px;
+  }
+  .list-infobox-text {
+    padding-left: 32px;
+  }
+}
+
+/* Grid: image and text, square-ish */
+.grid-row {
+   margin: 32px 56px 0 32px;
+}
+.grid-infobox {
+  margin: 0px 16px;
+  width: 33%;
+  background-color: white;
+}
+.grid-infobox-text {
+  background-color: white;
+  padding: 16px 16px 24px 16px;
+}
+
+/* Images */
+.large-column img,
+.list-infobox-image img,
+.grid-infobox img,
+.large-column video {
+  width: 100%;
+  vertical-align: middle;
+}
+.list-infobox-image .mobile {
+  display: none;
+}
+@media only screen and (max-width: 650px) {
+  .list-infobox-image .desktop {
+    display: none;
+  }
+  .list-infobox,
+  .list-infobox-image .mobile {
+    display: block;
+  }
+  .list-infobox-image {
+    width: auto;
+  }
+}
+
+/* Fonts */
+h1, h2, .bold {
+  font-weight: bold;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding-bottom: 8px;
+}
+.title-center h2 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+body p {
+  font-size: 0.75rem;
+  line-height: 1.6;
+  padding: 0;
+}
+body a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
+}
+@media only screen and (max-width: 650px) { /* Mobile */
+  .title-center h2 {
+    margin-bottom: 16px;
+  }
+}
+
+/* Colors */
+.bg-grey-dark {
+  background-color: #d8d8d8;
+}
+.bg-grey-medium {
+  background-color: #eaebec;
+}
+.fg-grey-light {
+  color: #9b9b9b;
+}
+.fg-grey-dark {
+  color: #4a4a4a;
+}
+@media only screen and (max-width: 650px) { /* Mobile */
+  .bg-grey-medium,
+  .bg-grey-dark {
+    background-color: white;
+  }
+}
+
+/* ========= End of universal styles ========= */
+
+
+/* Header with logo and menu */
+header {
+  width: 100%;
+  /*  position: fixed;
+      z-index: 1; */
+  background-color: white;
+}
+.logo-and-menu {
+  height: 32px;
+  padding: 16px 24px;
+  align-items: center;
+}
+.logo {
+  align-items: center;
+  flex-grow: 1;
+}
+nav li {
+  padding-left: 16px;
+}
+.mobile-nav {
+    display: none;
+}
+@media only screen and (max-width: 650px) { /* Mobile */
+  .logo-and-menu {
+    display: none;
+  }
+  .mobile-nav {
+    display: flex;
+    height: 64px;
+    padding: 0px 24px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+
+/* Main banner */
+#banner {
+  /*  padding-top: 96px; */
+}
+.banner-text {
+  flex-direction: column;
+  justify-content: center;
+}
+.button {
+  width: 100%;
+  background-color: #4a4a4a;
+  padding: 8px 0;
+  margin-top: 24px;
+  text-align: center;
+}
+.button a {
+  color: white;
+}
+.banner-text h1, p {
+  padding-bottom: 32px;
+  line-height: 1.25;
+}
+.banner-text p {
+  font-weight: 600;
+  font-size: 1rem;
+}
+@media only screen and (max-width: 650px) { /* Mobile */
+  #banner {
+    padding-top: 0;
+  }
+  .banner-text {
+    padding: 0px 16px;
+  }
+  .banner-text h1 {
+    padding-top: 32px;
+  }
+  .banner-text br {
+    display: none;
+  }
+}
+
+
+/* Main info */
+.main-testimonial-text h2 {
+  padding: 32px 0 24px 0;
+}
+#author {
+  font-size: 0.6rem;
+  padding-top: 24px;
+}
+#campus-news a {
+  font-size: 0.75rem;
+  color: #4a90e2;
+  line-height: normal;
+  padding: 8px 0 0 0;
+}
+@media only screen and (min-width: 651px) { /* Desktop */
+  #orientation-date .list-infobox-image,
+  #orientation-date .list-infobox-text {
+    padding-top: 0px;
+  }
+}
+@media only screen and (max-width: 650px) { /* Mobile */
+  .main-testimonial {
+    display: none;
+  }
+  #main-info {
+    padding-top: 0;
+  }
+}
+
+
+/* Curriculum */
+#curriculum p:nth-child(2) { /* Overkill way of adding padding under "COURSES" */
+  padding-bottom: 8px;
+}
+@media only screen and (max-width: 650px) { /* Mobile */
+  #curriculum img,
+  #curriculum p {
+    display: none;
+  }
+  #curriculum .grid-row,
+  #curriculum .grid-infobox-text {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+  }
+  #curriculum .grid-row {
+    margin-bottom: 8px;
+  }
+  #curriculum .grid-row:last-child {
+    margin-bottom: 0px;
+  }
+  #curriculum .grid-infobox {
+    padding: 16px;
+    margin-bottom: 8px;
+    width: auto;
+  }
+  #curriculum .grid-infobox,
+  #curriculum .grid-infobox-text {
+    background-color: #eaebec;
+  }
+  #curriculum .grid-infobox:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+
+/* Thesis exhibit */
+#thesis-exhibit video {
+  padding-bottom: 24px;
+}
+@media only screen and (max-width: 650px) { /* Mobile */
+  #thesis-exhibit .video-comment {
+    display: none;
+  }
+  #thesis-exhibit .small-column {
+    display: none;
+  }
+  #thesis-exhibit.container {
+    padding-bottom: 0px;
+  }
+}
+
+
+/* Footer */
+footer {
+  padding: 16px 24px 32px 24px;
+}
+#copyright {
+  flex-grow: 1;
+}
+#legal-terms p {
+  padding-left: 16px;
+}
+@media only screen and (max-width: 650px) { /* Mobile */
+  footer {
+    padding: 16px;
+  }
+  #legal-terms {
+    display: none;
+  }
+}
